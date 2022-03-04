@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+<div class="container-fluid p-5 bg-dark text-white">
+  <h3>Welcome to Employee Management Portal!</h3>
+</div>
+<div class="alert alert-danger alert-dismissible d-flex align-items-center fade show" id="error">
+    <i class="bi-exclamation-octagon-fill"></i>
+    <strong class="mx-2">Error!</strong><div id="error_msg"></div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" onclick="closeButton()"></button>
+</div>
+<div class="container">
+    <div class = " row ">
+        <div class="col-sm-5 p-3 ">
+            <h3 class="h3 mb-3 font-weight-normal">New here? Create an account</h3>
+            <form action="{{ url_for('register') }}" method="GET" class = "create_user" id = "form_register" onsubmit="return createUser('employee')">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{ form.username.label() }}
+                    {{ form.username(class="form-control", placeholder="Enter Username", id="username") }}
+                </div>
+                <div class="form-group">
+                    {{ form.password.label() }}
+                    {{ form.password(class="form-control", placeholder="Enter Password", id = "password") }}
+                </div>
+                <div class="form-group">
+                    {{ form.confirm_password.label() }}
+                    {{ form.confirm_password(class="form-control", placeholder="Renter Password", id="confirm_password") }}
+                </div>
+                <br>
+                    {{ form.submit(class="btn btn-block btn-dark") }}
+            </form>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-1" id="vl"></div>
+        <div class="col-sm-5 p-3 text-center">
+            <h3 class="h3 mb-3 font-weight-normal">Already Registered? Sign in to your Account</h3>
+            <br>
+            <form action="{{ url_for('login') }}" method="GET">
+                <input type="submit" class="btn btn-dark" value="Sign In">
+            </form>
+        </div>
+    </div>
+    {% endblock %}
+</div>

@@ -1,0 +1,10 @@
+{
+    "employeeID": 2,
+    "first_name": "Harry",
+    "last_name": "Dumbledore",
+    "email": "harry@gmail.com",
+    "phone_no": 7005000600,
+    "dob": "1998-11-11",
+    "address": "Gomtinagar",
+    "user_id": 3
+}

@@ -1,0 +1,13 @@
+#vl {
+    border-left: 2px solid black;
+    height: 400px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+body{
+    background-color: rgba(245, 233, 239, 0.35);
+}
+
+#error{
+    visibility: hidden;
+    }

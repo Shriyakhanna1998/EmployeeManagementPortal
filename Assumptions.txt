@@ -1,0 +1,22 @@
+Details:- 
+
+Admin username :- "shriya__khanna"
+Admin password :- "Shriya123"
+
+Assumptions :-
+
+- A user without user credentials cannot fill in the details for registration.
+
+- Admin can see all the pages and perform functionalities like editing user details, deleting user details alon with
+    the credentials and also create a user with all the details.
+
+- Rest apis are protected by JWT token which only avails and gets pass on when a user gets authenticated
+- Employee cannot visit master screen.
+
+- flask_login is used to implement the login and logout functionality. Also, providing more security.
+
+- Admin can be created in backend only. Using front-end - only leads in creation of employees , so as
+    to disable the possibility of anyone entering a role of an admin and getting access to all the
+    functionality and other employees details.
+
+-  Employees get to view their details only.

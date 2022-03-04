@@ -1,0 +1,22 @@
+[
+    {
+        "employeeID": 1,
+        "first_name": "Elora",
+        "last_name": "Jenny",
+        "email": "elora@gmail.com",
+        "phone_no": 8005000600,
+        "dob": "1998-11-11",
+        "address": "Noida",
+        "user_id": 2
+    },
+    {
+        "employeeID": 3,
+        "first_name": "Elora",
+        "last_name": "Jenny",
+        "email": "elor1a@gmail.com",
+        "phone_no": 8005000600,
+        "dob": "1998-11-11",
+        "address": "Noida",
+        "user_id": 2
+    }
+]

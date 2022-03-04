@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Register
+{% endblock %}
+{% block content %}
+    <div class="container-fluid p-4 bg-dark text-white">
+      <h4>Registration Form</h4>
+    </div>
+    <div class="container pt-3">
+        <div class="alert alert-danger alert-dismissible d-flex align-items-center fade show" id="error">
+            <i class="bi-exclamation-octagon-fill"></i>
+            <strong class="mx-2">Error!</strong><div id="error_msg"></div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" onclick="closeButton()"></button>
+        </div>
+        <div>
+            <form action="{{ url_for('login') }}" method="GET" onsubmit="return register()">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{ form.first_name.label() }}
+                    {{ form.first_name(class="form-control", placeholder="Enter your first name", id="first_name") }}
+                </div>
+                <div class="form-group">
+                    {{ form.last_name.label() }}
+                    {{ form.last_name(class="form-control", placeholder="Enter your last name", id="last_name") }}
+                <div class="form-group">
+                    {{ form.email.label() }}
+                    {{ form.email(class="form-control", placeholder="Enter your email", id="email") }}
+                </div>
+                <div class="form-group">
+                    {{ form.phone_no.label() }}
+                    {{ form.phone_no(class="form-control", placeholder="Enter your phone number", id="phone_no") }}
+                </div>
+                <div class="form-group">
+                    {{ form.dob.label() }}
+                    {{ form.dob(class="form-control", placeholder="Enter your date of birth", id="dob") }}
+                </div>
+                <div class="form-group">
+                    {{ form.address.label() }}
+                    {{ form.address(class="form-control", placeholder="Enter your address", id="address") }}
+                </div>
+                    <br>
+                {{ form.submit(class="btn btn-block btn-dark") }}
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
